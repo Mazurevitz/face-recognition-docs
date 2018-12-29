@@ -105,23 +105,49 @@ This chapter contains following elements:
 > relationships, accomplishments, or self-fulfillment. Over the last few
 > years it can be observed, that the biological identification is rising
 > in its popularity. There are new ways found to utilize our biological
-> footprints. Most of the use cases revolves around security.
-> Fingerprints are used to unlock locks for over a decade. Fingerprint
-> scanners have also found a way to get into smartphone market and now,
-> scanner can be found in almost every smartphone.
+> footprints. What we can also notice, is that most of the use cases
+> revolves around security, and for a good reason. Fingerprints are used
+> to unlock locks for decades. Fingerprint scanners have also found a
+> way to consumer electronics. We can't imagine a world where we can't
+> secure our smartphone or notebook just with a password. Fingerprint
+> scanners have expended rapidly when it comes to smartphones and made
+> our lives better.
 >
-> But it's not the only way we are trying to secure our private data. We
-> have developed ways to recognize people by other features like iris,
-> or even from a face in general, using different kinds of sensors, from
-> cameras, infrared light sensors to depth detectors that remember given
-> points on a face.
+> But it's not the only way we are trying to secure our privacy,
+> including our increasingly valuable resource, which is data. We have
+> developed ways to recognize people by other features like iris, or
+> even from a face in general, using different kinds of sensors.
+> Cameras, infrared light sensors to depth detectors that remember given
+> points on a face. And everything happens within a blink of an eye.
 >
-> What we can do apart from protecting our data, is something that we
-> crave to do since beginning of the humanity. We want to protect
+> What we want to do apart from protecting our data, is something that
+> we crave to do since beginning of the humanity. We want to protect
 > ourselves. We want to feel safe and comfortable, it is, in fact,
-> required, as stated previously. test**\
-> \
-> **
+> required, as stated previously.
+>
+> One of the main issues arising in recent years, is public safety and
+> detection of dangerous people. We can observe increasing activity of
+> terrorism in a lot of European countries. The awareness of people is
+> also increasing, we are learning that prevention is better that
+> treatment. National safety agencies recognize most of European
+> countries at least on moderate threat of terrorism. A lot of countries
+> are considered even as a high threat for regular travelers. This is
+> something that needs to be addressed as quickly as possible, and we
+> need to work on the technology, that can be effectively applicated for
+> new solutions.
+>
+> Main goal of this thesis is to implement face detection algorithms,
+> both with the face recognition. This could provide us with useful
+> tools to analyze and examine, for example video footages that are
+> collected every day on thousands of city cameras around the globe. We
+> can use that existing architecture, not only to look for people that
+> have already broke the law, but also to prevent crime. Simple camera
+> system doesn't provide us with the possibility of detecting the face.
+> We would need to do that manually which is a complicated and tedious
+> work, that not every person is able to do. The main focus is to
+> accomplish filtering dangerous, or at least for some reason crucial
+> for safety people, implementing algorithms that detect and recognize
+> their faces.
 
 **\
 **
