@@ -135,7 +135,10 @@ This chapter contains following elements:
 > something that needs to be addressed as quickly as possible, and we
 > need to work on the technology, that can be effectively applicated for
 > new solutions.
->
+
+Goal of the thesis
+------------------
+
 > Main goal of this thesis is to implement face detection algorithms,
 > both with the face recognition. This could provide us with useful
 > tools to analyze and examine, for example video footages that are
@@ -149,8 +152,21 @@ This chapter contains following elements:
 > for safety people, implementing algorithms that detect and recognize
 > their faces.
 
-**\
-**
+Scope of work
+-------------
+
+> Main scope of the work contains a few elements that needed to be
+> combined to give full spectrum of the problem. First of all, I needed
+> to choose programming language, that would be easy to use, yet contain
+> all the elements needed to process images, like easily accessible and
+> usable libraries that would greatly accelerate the progress of work.
+> Then, analysis of current solutions, and choice of a few algorithms
+> that comply with what this thesis is trying to achieve and comparison
+> of their effectiveness. Next thing was the actual implementation of
+> the solution in the programming language of choice, but also
+> processing the testing material consisting of video sequences that
+> were analyzed and graphically modified that the human can easily
+> observe effects of the detection and recognition in real time.
 
 \[Problem analysis\]
 ====================
@@ -167,6 +183,60 @@ This chapter contains following elements:
 -   description of existing solutions (also scientific ones, if the
     > problem is scientifically researched), algorithms, location of the
     > thesis in the scientific domain.
+
+Face detection methods
+----------------------
+
+There are a lot of ways to detect given features, including face
+features, that would allow us to recognize position of the face on a
+given media sample. Although one that got very popular since its release
+is based on machine learning approach, from the work of P. Viola and M.
+Jones \[1\] \[2\]. Their work is described as extremely rapid in terms
+of effectiveness, and this is something that is crucial for effective
+and real time face recognition. The original study was performed on
+Intel Pentium III clocked on 700MHz, which is a rather old processing
+unit considering performance of newest units. This would give over 15fps
+on 384x288 pixel images. We can compare similar CPUs using tool
+UserBenchmark \[2\]. Comparing closest processor that this tool provides
+us, which is a successor to Pentium III, Pentium 4. Its performance can
+be taken as comparable, especially in units that were on similar clock
+speeds \[3\]. Unit that was used for calculations in this thesis was
+Intel Core i5 4690k, which is according to UserBenchmark, over ten times
+faster on average, often going up to twenty times faster and above
+\[2\]. This gives us the opportunity to take higher resolution of video
+samples and photos, and still achieve a very satisfying frames per
+second rate.
+
+Idea is that if given element, item or other object has a unique shape,
+we can assume, that it also has unique properties when it comes to light
+that is projected onto that object. This gives us a tool to check
+whether chosen parts of an image have lighting that is changing in a way
+that was previously seen and is recognize for example as a face.
+
+![](media/image2.png){width="5.236805555555556in"
+height="1.0666666666666667in"}
+
+Figure 1Basic Haar-like features \[1\]
+
+On the Figure 1 we can see what features are used to distinguish between
+light and dark spots on a picture. Although this can be misleading, what
+we really want to see if we want to understand is to see the image in a
+way shown in Figure 2.
+
+![https://4.bp.blogspot.com/-bnLjamBCFxo/W8VhoCS2ryI/AAAAAAAAByA/raSrnduCbwog3mHq0cYslpZMoQyhTVkqACLcBGAs/s1600/Screenshot%2Bfrom%2B2018-10-16%2B09-27-00.png](media/image3.png){width="2.1145833333333335in"
+height="2.8229166666666665in"}
+
+Figure 2Haar-like feature on face \[5\]
+
+So, the colors itself are not important, but the pixel values within.
+For example, if we want to find a face, we can safely assume, that
+forehead pixels will be on average brighter than pixels that are within
+eyes region, due to the shadow dropping from the eyebrows. The same goes
+mostly for things like nose, where we can assume either vertical line,
+that is bright and has darker surroundings due to the shadows. But this
+is also something that we need to be careful with, due to the changing
+light conditions. We can compensate for that looking for w line that has
+a darker region only on one side.
 
 Requirements and tools 
 =======================
@@ -209,7 +279,7 @@ This chapter contains following elements:
 The entire document should contain references to the illustrations
 contained therein (Fig. 4.1).
 
-  ![](media/image2.png){width="3.0625in" height="2.46875in"}
+  ![](media/image4.png){width="3.0625in" height="2.46875in"}
   ------------------------------------------------------------
   Fig.4.1. *The variation funkstioni*
 
@@ -241,7 +311,7 @@ size 10 in frames (Listing 4.1) with a space between the lines of the
 value 1. All lines of code should be numbered so that they can be
 referenced in the text of the document.
 
-*Listing* *1. Generating random numbers*
+Listing 1. Generating random numbers
 
 +----+--------------------------------------------------------+
 | 1  | **package** polsl.iinf.lab;                            |
