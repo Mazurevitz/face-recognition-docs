@@ -68,7 +68,7 @@ Contents {#contents .TOCHeading}
 
 [7. Conclusions 21](#conclusions)
 
-[Bibliography i](#bibliography)
+[Bibliography i](#_Toc526891489)
 
 [List of abbreviations and symbols
 ii](#list-of-abbreviations-and-symbols)
@@ -197,13 +197,13 @@ and real time face recognition. The original study was performed on
 Intel Pentium III clocked on 700MHz, which is a rather old processing
 unit considering performance of newest units. This would give over 15fps
 on 384x288 pixel images. We can compare similar CPUs using tool
-UserBenchmark \[2\]. Comparing closest processor that this tool provides
+UserBenchmark \[3\]. Comparing closest processor that this tool provides
 us, which is a successor to Pentium III, Pentium 4. Its performance can
 be taken as comparable, especially in units that were on similar clock
-speeds \[3\]. Unit that was used for calculations in this thesis was
+speeds \[4\]. Unit that was used for calculations in this thesis was
 Intel Core i5 4690k, which is according to UserBenchmark, over ten times
 faster on average, often going up to twenty times faster and above
-\[2\]. This gives us the opportunity to take higher resolution of video
+\[3\]. This gives us the opportunity to take higher resolution of video
 samples and photos, and still achieve a very satisfying frames per
 second rate.
 
@@ -431,31 +431,47 @@ This chapter contains following elements:
 
 -   encountered difficulties and problems.
 
-Bibliography {#bibliography .ListParagraph}
+Bibliography
 ============
 
-+-----------------------------------+-----------------------------------+
-| \[1\]                             | Name Surname, Name Surname.       |
-|                                   | *Webpage title*.                  |
-|                                   | http://adres/w/sieci.html         |
-|                                   | \[access date: 2018-09-30\].      |
-+===================================+===================================+
-| \[2\]                             | Name Surname, Name Surname.       |
-|                                   | *Title of a book*. Publisher,     |
-|                                   | Warsaw, 2017.                     |
-+-----------------------------------+-----------------------------------+
-| \[3\]                             | Name Surname, Name Surname. Title |
-|                                   | of an article in the journal.     |
-|                                   | *Journal title*,                  |
-|                                   | 157(8):1092--1113, 2016.          |
-+-----------------------------------+-----------------------------------+
-| \[4\]                             | Name Surname, Name Surname, Name  |
-|                                   | Surname. Title of a conference    |
-|                                   | article. In *Conference title*,   |
-|                                   | pages 5346--5349, 2006.           |
-|                                   |                                   |
-|                                   | .                                 |
-+-----------------------------------+-----------------------------------+
+  -- --
+     
+     
+     
+     
+     
+     
+     
+     
+     
+  -- --
+
+\[1\] P. Viola i M. Jones, „Rapid object detection using a boosted
+cascade of simple features," w *Proceedings of the IEEE Computer Society
+Conference on Computer Vision and Pattern Recognition. CVPR 2001*,
+Kauai, 2001. \[2\] P. Viola i M. Jones, „Robust Real-Time Face
+Detection," *International Journal of Computer Vision,* tom 57, nr 2, p.
+137--154, 2004. \[3\] \"userbenchmark,\" \[Online\]. Available:
+https://cpu.userbenchmark.com/Compare/Intel-Pentium-4-160GHz-vs-Intel-Core-i5-4690K/m15237vs2432.
+\[Accessed 29 12 2018\].\[4\] justinwl, \"ancientelectronics,\"
+\[Online\]. Available:
+https://ancientelectronics.wordpress.com/tag/pentium-4-vs-pentium-iii/.
+\[Accessed 29 12 2018\].\[5\] N. Ipe, \"N Recursions,\" 16 10 2018.
+\[Online\]. Available:
+http://nrecursions.blogspot.com/2018/10/a-better-tutorial-on-haar-features-used.html.
+\[Accessed 29 12 2018\].\[6\] R. Lienhart i J. Maydt, „An extended set
+of Haar-like features for rapid object detection," w *Proceedings.
+International Conference on Image Processing*, Rochester, 2002. \[7\] T.
+Mita, T. Kaneko i O. Hori, „Joint Haar-like features for face
+detection," w *Tenth IEEE International Conference on Computer Vision
+(ICCV\'05) Volume 1*, Beijing, 2005. \[8\] W. K. Taylor, „Machine
+learning and recognition of faces," IET, London, 1967.\[9\] M. &. B. D.
+Roomi, „A Review Of Face Recognition Methods," *International Journal of
+Pattern Recognition and Artificial Intelligence,* tom 27, nr 4, 2013.
+\[10\] T. Shakunaga i K. Shigenari, „Decomposed eigenface for face
+recognition under various lighting conditions," w *Proceedings of the
+2001 IEEE Computer Society Conference on Computer Vision and Pattern
+Recognition*, Kauai, 2001.
 
 List of abbreviations and symbols {#list-of-abbreviations-and-symbols .ListParagraph}
 =================================
