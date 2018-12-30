@@ -54,30 +54,30 @@ inżynierskiej.
 Contents {#contents .TOCHeading}
 ========
 
-[1. Introduction 1](#introduction)
+[1. Introduction 3](#introduction)
 
 [2. \[Problem analysis\] 5](#problem-analysis)
 
-[3. Requirements and tools 9](#requirements-and-tools)
+[3. Requirements and tools 13](#requirements-and-tools)
 
-[4. External specification 12](#external-specification)
+[4. External specification 16](#external-specification)
 
-[5. Internal specification 15](#internal-specification)
+[5. Internal specification 19](#internal-specification)
 
-[6. Verification and validation 18](#verification-and-validation)
+[6. Verification and validation 22](#verification-and-validation)
 
-[7. Conclusions 21](#conclusions)
+[7. Conclusions 25](#conclusions)
 
-[Bibliography i](#_Toc526891489)
+[Bibliography **Error! Bookmark not defined.**](#_Toc526891489)
 
 [List of abbreviations and symbols
-ii](#list-of-abbreviations-and-symbols)
+iii](#list-of-abbreviations-and-symbols)
 
-[Contents of attached CD-ROM iii](#contents-of-attached-cd-rom)
+[Contents of attached CD-ROM iv](#contents-of-attached-cd-rom)
 
-[List of Figures iv](#list-of-figures)
+[List of Figures v](#list-of-figures)
 
-[List of Tables v](#list-of-tables)
+[List of Tables vi](#list-of-tables)
 
 **\
 **
@@ -294,6 +294,32 @@ Next general task in facial recognition is to extract features \[9\]. We
 would also want to reduce dimensionality of the image, so that the data
 that needs to be processed is not that enormous, and yet the important
 features are conserved.
+
+### Holistic approaches
+
+Holistic ways of recognizing faces are dealing with the problem with
+comprehensive approach to processing facial verification, taking data
+from image as a whole block. They consider small number of features and
+try to envelop components of an image. Later, these components are used
+to verify similar shapes on other data \[11\].
+
+#### Eigenfaces
+
+When considering sets of images, it can be seen that great amount of
+data can easily arise. Reasonable and natural step would be to reduce
+its size. The advantage of this approach is that we don't need a big
+dataset, although the bigger is usually the better. Eigenface is a
+method that is extracting features into vectors, and then represent then
+in a form of covariance matrix. Having those vectors, we can calculate
+how distant they are \[12\] \[11\].
+
+However, in this approach training data set is required to be processed,
+otherwise results will be not satisfactory. We need to equalize
+lighting, and alight image, it is also preferred to remove background
+and other noise that could have negative influence. This algorithm is
+using PCA (Principal Component Analysis) to reduce dimensions and find
+vectors. Vector defines subspace -- face space, and training set is
+projected, to find weights, or similarities in other words.
 
 Requirements and tools 
 =======================
