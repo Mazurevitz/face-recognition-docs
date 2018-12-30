@@ -238,6 +238,63 @@ is also something that we need to be careful with, due to the changing
 light conditions. We can compensate for that looking for w line that has
 a darker region only on one side.
 
+There were taken many approaches to improve initial Viola and Jones,
+including the Viola himself. One of the first successful improvements
+were made only one year later, by the R. Lienhart and J. Maydt \[6\].
+They were dealing with two main problems of original approach, by adding
+45 rotated features and adding new optimization procedures for improved
+performance.
+
+![](media/image4.png){width="3.4905653980752405in"
+height="2.8991087051618547in"}
+
+Figure 3Extended features proposed by Lienhart and Maydt \[6\]
+
+We can also observe further attempts of improvements. T. Mita, T. Kaneko
+and O. Hori proposed and derived method of detecting co-occurrence of
+features. One of the things that are addressed by those authors, is that
+in original solution, after detecting one feature, detecting of
+proceeding ones comes with much higher error rate \[7\].
+
+![](media/image5.png){width="4.010416666666667in"
+height="2.3187139107611547in"}
+
+Figure 4 Joint Haar-Like feature
+
+This approach allows to capture more of a structural similarity of
+faces. Experiment results give reduced error rates and improved
+performance, even when considering bigger number of features, than in
+Viola and Jones solution.
+
+Face recognition methods
+------------------------
+
+Face recognition is a topic that is highly researched for decades, first
+by manual labor, where for example physical photos were projected onto
+photomultiplier matrix, then small motors were turned according to
+illumination \[8\], which is in fact a machine learning approach. Since
+then, we have developed numerous amounts of methods to recognize
+patterns, that includes faces \[9\]. We can find approaches that are
+holistic, hybrid, feature-based, artificial neural networks,
+fuzzy-based, generic-algorithms based and more \[9\], where variance in
+implementation can mixing different approaches can also differ. Some
+ways of recognition would estimate face position, for instance, to be
+able to transform image in given space, to obtain more accurate results.
+
+It is also required, for a reasonable efficiency to optimize and
+normalize dataset from which the algorithm will be built upon. The
+significant matter is to provide good quality images, for face
+recognition we would probably want straight face, without rotation and
+with the same scale as the rest of the photos, also with an equal
+lighting \[10\]. But it is not always possible to provide such
+resources. Good practice would be to implement image processing that
+equalize the appearance of the given object.
+
+Next general task in facial recognition is to extract features \[9\]. We
+would also want to reduce dimensionality of the image, so that the data
+that needs to be processed is not that enormous, and yet the important
+features are conserved.
+
 Requirements and tools 
 =======================
 
@@ -279,7 +336,7 @@ This chapter contains following elements:
 The entire document should contain references to the illustrations
 contained therein (Fig. 4.1).
 
-  ![](media/image4.png){width="3.0625in" height="2.46875in"}
+  ![](media/image6.png){width="3.0625in" height="2.46875in"}
   ------------------------------------------------------------
   Fig.4.1. *The variation funkstioni*
 
