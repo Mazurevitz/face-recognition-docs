@@ -351,9 +351,42 @@ interrupted by reflexes on the iris, that should be eliminated, eyebrows
 are often described as a parabola approximation. Nose is one of the
 simplest properties that can be used as a base, where gray levels
 contrasts are great within neighbor regions. Mouth shape can be also
-described as a function. Knowing that many facial points chin location
+described as a function. Knowing that many facial points, chin location
 can be also estimated. Approach like this was described in \[16\] where
 efficiency was often exceeding 90 percent.
+
+However, this is a limited approach when it comes to providing
+information about face details. Facial features are rich in texture, but
+not enough to tell them apart from background. This problem is being
+approached by adding context information of each feature. But this is a
+tough task, especially when within- class variance is big.
+
+### Soft computing methods
+
+> Face recognition comes with a lot of variance, imprecision,
+> uncertainty and approximations. Soft computing methods are addressing
+> those problems and tries to solve them. These approaches contain
+> methods like fuzzy logic, artificial neural networks, machine
+> learning, generic algorithms \[17\].
+
+#### Artificial neural networks
+
+Inspired by the biological nervous system and the way it works. This
+solution aims to solve non-linear problems. Artificial neural networks
+are in fact an interconnected web of so-called neurons. Each of the
+neurons performs little operations that adjusts weights, so that desired
+output is shown. Training is often accomplished by feeding the neural
+network with patterns
+
+#### Fuzzy logic
+
+This is an approach mimicking human knowledge, that is naturally
+imprecise. It introduces concept of partial truth and false. That is due
+to the fact that most of the human body properties are nonlinear and
+trimming them down to linear solutions makes them often impossible to
+achieve high accuracy \[18\]. This method is often incorporated as a
+part of recognition process with other methods. For example, fuzzy
+k-nearest neighbor classification to find suitable scatter matrices.
 
 Requirements and tools 
 =======================
@@ -504,6 +537,15 @@ Bibliography
      
      
      
+     
+     
+     
+     
+     
+     
+     
+     
+     
   -- --
 
 \[1\] P. Viola i M. Jones, „Rapid object detection using a boosted
@@ -531,7 +573,31 @@ Pattern Recognition and Artificial Intelligence,* tom 27, nr 4, 2013.
 \[10\] T. Shakunaga i K. Shigenari, „Decomposed eigenface for face
 recognition under various lighting conditions," w *Proceedings of the
 2001 IEEE Computer Society Conference on Computer Vision and Pattern
-Recognition*, Kauai, 2001.
+Recognition*, Kauai, 2001. \[11\] G. M. Zafaruddin i H. S. Fadewar, Face
+recognition: A holistic approach review, Mysore: IEEE, 2014. \[12\] P.
+Belhumeur, J. Hespanha i D. Kriegman, „Eigenfaces vs. Fisherfaces:
+recognition using class specific linear projection," *IEEE Transactions
+on Pattern Analysis and Machine Intelligence,* tom 19, nr 7, pp.
+711-720, 1997. \[13\] S. Jaiswal, D. (. S. S. Bhadauria i D. R. S.
+Jadon, „COMPARISON BETWEEN FACE RECOGNITION ALGORITHM-EIGENFACES,
+FISHERFACES AND ELASTIC BUNCH GRAPH MATCHING," *Journal of Global
+Research in Computer Science,* tom 2, nr 7, pp. 187-192, 2011. \[14\] R.
+Huang, V. Pavlovic i D. N. Metaxas, „A hybrid face recognition method
+using Markov random fields," w *Proceedings of the 17th International
+Conference on Pattern Recognition*, Cambridge, 2004. \[15\] H. R. R. J.
+B. C. O. &. M. S. Cho, „An Efficient Hybrid Face Recognition Algorithm
+Using PCA and GABOR Wavelets," *International Journal of Advanced
+Robotic Systems,* tom 11, nr 4, 2014. \[16\] P. Campadelli, R.
+Lanzarotti i C. Savazzi, „A feature-based face recognition system," w
+*Proceedings of the 12th International Conference on Image Analysis and
+Processing* , Milano, 2003. \[17\] D. Ibrahim, „An overview of soft
+computing," w *12th International Conference on Application of Fuzzy
+Systems and Soft Computing*, Vienna, 2016. \[18\] M. H. Fadzil i L. C.
+Choon, „Face recognition system based on neural networks and fuzzy
+logic," w *Proceedings of International Conference on Neural Networks*,
+Houston, 1997. \[19\] G. M. Zafaruddin i H. S. Fadewar, „Face
+recognition: A holistic approach review," w *International Conference on
+Contemporary Computing and Informatics*, Mysore, 2014.
 
 List of abbreviations and symbols {#list-of-abbreviations-and-symbols .ListParagraph}
 =================================
