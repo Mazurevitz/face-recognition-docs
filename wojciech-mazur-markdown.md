@@ -104,37 +104,37 @@ This chapter contains following elements:
 > fundamental needs. Without it, it is hard to think about friends,
 > relationships, accomplishments, or self-fulfillment. Over the last few
 > years it can be observed, that the biological identification is rising
-> in its popularity. There are new ways found to utilize our biological
-> footprints. What we can also notice, is that most of the use cases
-> revolves around security, and for a good reason. Fingerprints are used
-> to unlock locks for decades. Fingerprint scanners have also found a
-> way to consumer electronics. We can't imagine a world where we can't
-> secure our smartphone or notebook just with a password. Fingerprint
-> scanners have expended rapidly when it comes to smartphones and made
-> our lives better.
+> in its popularity. There are new ways found to utilize human
+> biological footprints. What can be noticed, is that most of the use
+> cases revolves around security, and for a good reason. Fingerprints
+> are used to unlock locks for decades. Fingerprint scanners have also
+> found a way to consumer electronics. World with securing our
+> smartphone or a notebook with just a password can no longer be
+> imagined. Fingerprint scanners have expended rapidly when it comes to
+> smartphones and made our lives better.
 >
-> But it's not the only way we are trying to secure our privacy,
-> including our increasingly valuable resource, which is data. We have
-> developed ways to recognize people by other features like iris, or
+> But it's not the only way people are trying to secure our privacy,
+> including our increasingly valuable resource, which is data. There are
+> ways developed to recognize people by other features like iris, or
 > even from a face in general, using different kinds of sensors.
 > Cameras, infrared light sensors to depth detectors that remember given
 > points on a face. And everything happens within a blink of an eye.
 >
-> What we want to do apart from protecting our data, is something that
-> we crave to do since beginning of the humanity. We want to protect
-> ourselves. We want to feel safe and comfortable, it is, in fact,
-> required, as stated previously.
+> What people want to do apart from protecting our data, is something
+> that humanity crave to do since beginning of itself. To protect
+> ourselves from external harm. Feel safe and comfortable, which is, in
+> fact, required, as stated previously.
 >
 > One of the main issues arising in recent years, is public safety and
-> detection of dangerous people. We can observe increasing activity of
-> terrorism in a lot of European countries. The awareness of people is
-> also increasing, we are learning that prevention is better that
+> detection of dangerous people. Increasing activity of terrorism in a
+> lot of European countries can be observed. The awareness of people is
+> also increasing, it is being learned that prevention is better that
 > treatment. National safety agencies recognize most of European
 > countries at least on moderate threat of terrorism. A lot of countries
 > are considered even as a high threat for regular travelers. This is
-> something that needs to be addressed as quickly as possible, and we
-> need to work on the technology, that can be effectively applicated for
-> new solutions.
+> something that needs to be addressed as quickly as possible, and it is
+> needed to work on the technology, that can be effectively applicated
+> for new solutions.
 
 Goal of the thesis
 ------------------
@@ -142,15 +142,15 @@ Goal of the thesis
 > Main goal of this thesis is to implement face detection algorithms,
 > both with the face recognition. This could provide us with useful
 > tools to analyze and examine, for example video footages that are
-> collected every day on thousands of city cameras around the globe. We
-> can use that existing architecture, not only to look for people that
-> have already broke the law, but also to prevent crime. Simple camera
-> system doesn't provide us with the possibility of detecting the face.
-> We would need to do that manually which is a complicated and tedious
-> work, that not every person is able to do. The main focus is to
-> accomplish filtering dangerous, or at least for some reason crucial
-> for safety people, implementing algorithms that detect and recognize
-> their faces.
+> collected every day on thousands of city cameras around the globe.
+> That existing architecture can be used, not only to look for people
+> that have already broke the law, but also to prevent crime. Simple
+> camera system doesn't provide us with the possibility of detecting the
+> face. It would be needed to do that manually which is a complicated
+> and tedious work, that not every person is able to do. The main focus
+> is to accomplish filtering dangerous, or at least for some reason
+> crucial for safety people, implementing algorithms that detect and
+> recognize their faces.
 
 Scope of work
 -------------
@@ -196,7 +196,7 @@ of effectiveness, and this is something that is crucial for effective
 and real time face recognition. The original study was performed on
 Intel Pentium III clocked on 700MHz, which is a rather old processing
 unit considering performance of newest units. This would give over 15fps
-on 384x288 pixel images. We can compare similar CPUs using tool
+on 384x288 pixel images. Similar CPUs will be compared using tool
 UserBenchmark \[3\]. Comparing closest processor that this tool provides
 us, which is a successor to Pentium III, Pentium 4. Its performance can
 be taken as comparable, especially in units that were on similar clock
@@ -208,8 +208,8 @@ samples and photos, and still achieve a very satisfying frames per
 second rate.
 
 Idea is that if given element, item or other object has a unique shape,
-we can assume, that it also has unique properties when it comes to light
-that is projected onto that object. This gives us a tool to check
+it can be assumed, that it also has unique properties when it comes to
+light that is projected onto that object. This gives us a tool to check
 whether chosen parts of an image have lighting that is changing in a way
 that was previously seen and is recognize for example as a face.
 
@@ -218,24 +218,24 @@ height="1.0666666666666667in"}
 
 Figure 1Basic Haar-like features \[1\]
 
-On the Figure 1 we can see what features are used to distinguish between
-light and dark spots on a picture. Although this can be misleading, what
-we really want to see if we want to understand is to see the image in a
-way shown in Figure 2.
+On the Figure 1 is can be seen what features are used to distinguish
+between light and dark spots on a picture. Although this can be
+misleading, what should be really be seen if understanding of the
+problem is a priority, is to see the image in a way shown in Figure 2.
 
 ![https://4.bp.blogspot.com/-bnLjamBCFxo/W8VhoCS2ryI/AAAAAAAAByA/raSrnduCbwog3mHq0cYslpZMoQyhTVkqACLcBGAs/s1600/Screenshot%2Bfrom%2B2018-10-16%2B09-27-00.png](media/image3.png){width="2.1145833333333335in"
 height="2.8229166666666665in"}
 
 Figure 2Haar-like feature on face \[5\]
 
-So, the colors itself are not important, but the pixel values within.
-For example, if we want to find a face, we can safely assume, that
-forehead pixels will be on average brighter than pixels that are within
-eyes region, due to the shadow dropping from the eyebrows. The same goes
-mostly for things like nose, where we can assume either vertical line,
-that is bright and has darker surroundings due to the shadows. But this
-is also something that we need to be careful with, due to the changing
-light conditions. We can compensate for that looking for w line that has
+The colors itself are not important, but the pixel values within. For
+example, if face is to be found, it can be safely assumed, that forehead
+pixels will be on average brighter than pixels that are within eyes
+region, due to the shadow dropping from the eyebrows. The same goes
+mostly for things like nose, where either vertical line, that is bright
+and has darker surroundings due to the shadows. But this is also
+something that needs to be taken with care, due to the changing light
+conditions. Compensation can be done, by looking for white line that has
 a darker region only on one side.
 
 There were taken many approaches to improve initial Viola and Jones,
@@ -250,8 +250,8 @@ height="2.8991087051618547in"}
 
 Figure 3Extended features proposed by Lienhart and Maydt \[6\]
 
-We can also observe further attempts of improvements. T. Mita, T. Kaneko
-and O. Hori proposed and derived method of detecting co-occurrence of
+Further attempts of improvements can be observed. T. Mita, T. Kaneko and
+O. Hori proposed and derived method of detecting co-occurrence of
 features. One of the things that are addressed by those authors, is that
 in original solution, after detecting one feature, detecting of
 proceeding ones comes with much higher error rate \[7\].
@@ -273,10 +273,10 @@ Face recognition is a topic that is highly researched for decades, first
 by manual labor, where for example physical photos were projected onto
 photomultiplier matrix, then small motors were turned according to
 illumination \[8\], which is in fact a machine learning approach. Since
-then, we have developed numerous amounts of methods to recognize
-patterns, that includes faces \[9\]. We can find approaches that are
-holistic, hybrid, feature-based, artificial neural networks,
-fuzzy-based, generic-algorithms based and more \[9\], where variance in
+then, great amounts of methods were developed to recognize patterns,
+that includes faces \[9\]. Numerous approaches that are holistic,
+hybrid, feature-based, artificial neural networks, fuzzy-based,
+generic-algorithms based and more can be found \[9\], where variance in
 implementation can mixing different approaches can also differ. Some
 ways of recognition would estimate face position, for instance, to be
 able to transform image in given space, to obtain more accurate results.
@@ -284,14 +284,14 @@ able to transform image in given space, to obtain more accurate results.
 It is also required, for a reasonable efficiency to optimize and
 normalize dataset from which the algorithm will be built upon. The
 significant matter is to provide good quality images, for face
-recognition we would probably want straight face, without rotation and
-with the same scale as the rest of the photos, also with an equal
-lighting \[10\]. But it is not always possible to provide such
-resources. Good practice would be to implement image processing that
-equalize the appearance of the given object.
+recognition straight face is a suggested look, without rotation and with
+the same scale as the rest of the photos, also with an equal lighting
+\[10\]. But it is not always possible to provide such resources. Good
+practice would be to implement image processing that equalize the
+appearance of the given object.
 
-Next general task in facial recognition is to extract features \[9\]. We
-would also want to reduce dimensionality of the image, so that the data
+Next general task in facial recognition is to extract features \[9\].
+Dimensionality of the image is needed to be reduced, so that the data
 that needs to be processed is not that enormous, and yet the important
 features are conserved.
 
@@ -307,19 +307,53 @@ to verify similar shapes on other data \[11\].
 
 When considering sets of images, it can be seen that great amount of
 data can easily arise. Reasonable and natural step would be to reduce
-its size. The advantage of this approach is that we don't need a big
-dataset, although the bigger is usually the better. Eigenface is a
-method that is extracting features into vectors, and then represent then
-in a form of covariance matrix. Having those vectors, we can calculate
+its size. The advantage of this approach is that big dataset is not
+needed, although the bigger is usually the better. Eigenface is a method
+that is extracting features into vectors, and then represent then in a
+form of covariance matrix. Having those vectors, it can be calculated
 how distant they are \[12\] \[11\].
 
 However, in this approach training data set is required to be processed,
-otherwise results will be not satisfactory. We need to equalize
-lighting, and alight image, it is also preferred to remove background
-and other noise that could have negative influence. This algorithm is
-using PCA (Principal Component Analysis) to reduce dimensions and find
+otherwise results will be not satisfactory. It is needed to equalize
+lighting, and align image, it is also preferred to remove background and
+other noise that could have negative influence. This algorithm is using
+PCA (Principal Component Analysis) to reduce dimensions and find
 vectors. Vector defines subspace -- face space, and training set is
 projected, to find weights, or similarities in other words.
+
+#### Fisherfaces
+
+Fisherfaces are similar to Eigenfaces. Method uses both principal
+component analysis and linear discriminant analysis and produce a
+subspace projection matrix. It is minimizing variation within classes
+and maximizing separation. It should provide better results when it
+comes to different facial expressions and light variance. Although
+computation time is more complex, and time needed is greater \[13\].
+
+### Hybrid approaches
+
+These methods are based on mixing holistic approach and feature-based
+matching. These two methods have their advantages and disadvantages, but
+the idea is that combination of those two might give a better result and
+eliminate each other disadvantages \[14\] \[15\].
+
+A lot of hybrid approaches draw from the Gabor wavelets that were
+acknowledged as a reliable local feature extraction method, due to its
+sturdiness when it comes to light, distortions, translation \[15\].
+
+### Feature-based
+
+Every face has some distinctive features related to some regions that
+can be extracted. Eyes, nose, mouth, cheeks can be used to classify a
+face. Complexity of these solutions are often hidden under recognizing
+particular parts of the face. For example, eye processing could be
+interrupted by reflexes on the iris, that should be eliminated, eyebrows
+are often described as a parabola approximation. Nose is one of the
+simplest properties that can be used as a base, where gray levels
+contrasts are great within neighbor regions. Mouth shape can be also
+described as a function. Knowing that many facial points chin location
+can be also estimated. Approach like this was described in \[16\] where
+efficiency was often exceeding 90 percent.
 
 Requirements and tools 
 =======================
