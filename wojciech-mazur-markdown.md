@@ -587,6 +587,18 @@ algorithms including support vector machines, random forests, gradient
 boosting, k-means and more. It is also built upon and designed to
 cooperate with other scientific libraries like NumPy and SciPy.
 
+### Methodology of design and implementation
+
+The main design consists of three parts of the application that needs to
+be executed sequentially to achieve desired output starting from the
+non-processed database of photos.
+
+To allow clear architecture of the project, separation of tasks in the
+design of application was applied. Every part has completely different
+responsibility and whole program is in a pipe form, but also allows to
+execute different parts separately, if user, for example wants only to
+process images.
+
 External specification 
 =======================
 
@@ -611,6 +623,103 @@ This chapter contains following elements:
 -   working scenarios (with screenshots or output files).
 
 ### Requirements
+
+#### Software requirements
+
+The application was implemented using Python language, which means that
+it should be compatible with many different platforms, like Mac OS X,
+Linux or Windows, where procedure should consist only of copy and
+pasting the code. However, apart from code, system is required to have
+installed Python. Preferable way to install the Python is to install it
+by installing Anaconda package. Anaconda is a free and open-source
+distribution for Python and R for scientific computing. Installation of
+this package would simplify the whole process of setting up the
+environment needed to run the program. It is also cross-platform.
+
+On the Table 1 list of needed packaged can be seen, although their
+number is great, most of them come with the Anaconda package, and the
+installation process is not that complicated.
+
+Table 1 List of libraries needed to run the program
+
+  **Name**                    **Version**    **Build**            **Channel**
+  --------------------------- -------------- -------------------- -------------
+  astroid                     2.1.0          py36\_1000           conda-forge
+  basemap                     1.2.0          py36h4e5d7af\_0      anaconda
+  blas                        1.0            mkl                   
+  ca-certificates             2018.03.07     0                    anaconda
+  certifi                     2018.10.15     py36\_0              anaconda
+  cloudpickle                 0.6.1          py36\_0              anaconda
+  cmake                       3.13.2.post1   \<pip\>               
+  colorama                    0.4.0          py\_0                conda-forge
+  cycler                      0.10.0         py\_1                conda-forge
+  Cython                      0.29           \<pip\>               
+  dask-core                   1.0.0          py36\_0              anaconda
+  decorator                   4.3.0          py36\_0              anaconda
+  dlib                        19.9           np111py36\_0         conda-forge
+  face-recognition            1.2.3          \<pip\>               
+  face\_recognition\_models   0.3.0          pyh0cf5a0c\_0        akode
+  freetype                    2.9.1          he8b6a0d\_1004       conda-forge
+  geos                        3.6.2          h9ef7328\_2          anaconda
+  hdf5                        1.8.20         hac2f561\_1           
+  icc\_rt                     2017.0.4       h97af966\_0           
+  icu                         58.2           ha66f8fd\_1           
+  imageio                     2.4.1          py36\_0              anaconda
+  imutils                     0.5.2          \<pip\>               
+  intel-openmp                2019.0         118                   
+  isort                       4.3.4          py36\_1000           conda-forge
+  jpeg                        9c             hfa6e2cd\_1001       conda-forge
+  kiwisolver                  1.0.1          py36he980bc4\_1002   conda-forge
+  lazy-object-proxy           1.3.1          py36hfa6e2cd\_1000   conda-forge
+  libopencv                   3.4.2          h20b85fd\_0           
+  libpng                      1.6.34         h7602738\_2          conda-forge
+  libtiff                     4.0.9          h36446d0\_1002       conda-forge
+  libwebp                     0.5.2          7                    conda-forge
+  matplotlib                  2.2.3          py36h31860fd\_0      conda-forge
+  mccabe                      0.6.1          py\_1                conda-forge
+  mkl                         2018.0.3       1                     
+  mkl\_fft                    1.0.10         py36\_0              conda-forge
+  mkl\_random                 1.0.2          py36\_0              conda-forge
+  networkx                    2.2            py36\_1              anaconda
+  numpy                       1.11.3         py36h4a99626\_4       
+  numpy-base                  1.15.4         py36h8128ebf\_0       
+  olefile                     0.46           py36\_0              anaconda
+  opencv                      3.4.3          py36h597e314\_201    conda-forge
+  opencv-contrib-python       3.4.3.18       \<pip\>               
+  openssl                     1.0.2p         hfa6e2cd\_0          anaconda
+  pillow                      5.3.0          py36hdc69c19\_0      anaconda
+  Pillow                      5.3.0          \<pip\>               
+  pip                         18.1           py36\_1000           conda-forge
+  pip                         18.1           \<pip\>               
+  proj4                       5.1.0          hfa6e2cd\_1          anaconda
+  py-opencv                   3.4.2          py36hc319ecb\_0       
+  pylint                      2.2.2          py36\_1000           conda-forge
+  pyparsing                   2.3.0          py\_0                conda-forge
+  pyproj                      1.9.5.1        py36hb98d9bb\_1      anaconda
+  pyqt                        5.6.0          py36h764d66f\_1007   conda-forge
+  pyshp                       1.2.12         py36\_0              anaconda
+  python                      3.6.6          he025d50\_0          conda-forge
+  python-dateutil             2.7.5          py\_0                conda-forge
+  pytz                        2018.7         py\_0                conda-forge
+  pywavelets                  1.0.1          py36h8c2d366\_0      anaconda
+  qt                          5.6.2          h2639256\_8          conda-forge
+  scikit-image                0.14.0         py36h6538335\_1      anaconda
+  scikit-learn                0.20.1         py36hb854c30\_0      anaconda
+  scipy                       1.1.0          py36hc28095f\_0       
+  setuptools                  40.6.2         py36\_0              conda-forge
+  sip                         4.18.1         py36h6538335\_0      conda-forge
+  six                         1.11.0         py36\_1001           conda-forge
+  sqlite                      3.26.0         hfa6e2cd\_1000       conda-forge
+  tk                          8.6.8          hfa6e2cd\_0          anaconda
+  toolz                       0.9.0          py36\_0              anaconda
+  tornado                     5.1.1          py36hfa6e2cd\_1000   conda-forge
+  typed-ast                   1.1.0          py36hfa6e2cd\_1000   conda-forge
+  vc                          14.1           h21ff451\_3          anaconda
+  vs2015\_runtime             15.5.2         3                    anaconda
+  wheel                       0.32.3         py36\_0              conda-forge
+  wincertstore                0.2            py36\_1002           conda-forge
+  wrapt                       1.10.11        py36hfa6e2cd\_1001   conda-forge
+  zlib                        1.2.11         h2fa13f4\_1003       conda-forge
 
   --
   --
