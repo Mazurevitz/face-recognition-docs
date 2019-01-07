@@ -87,13 +87,13 @@ Introduction
 
 This chapter contains following elements:
 
--   introduction into the problem domain,
+-   **introduction into the problem domain,**
 
--   settling of the problem in the domain,
+-   **settling of the problem in the domain,**
 
--   objective of the thesis,
+-   **objective of the thesis,**
 
--   scope of the thesis,
+-   **scope of the thesis,**
 
 -   short description of chapters,
 
@@ -173,16 +173,16 @@ Scope of work
 
 This chapter contains following elements:
 
--   problem analysis,
+-   **problem analysis,**
 
--   state of the art, problem statement,
+-   **state of the art, problem statement,**
 
--   literature research (all sources in the thesis have to be referenced
-    > \[1, 2, 4, 3\]),
+-   **literature research (all sources in the thesis have to be
+    > referenced \[1, 2, 4, 3\]),**
 
--   description of existing solutions (also scientific ones, if the
+-   **description of existing solutions (also scientific ones, if the
     > problem is scientifically researched), algorithms, location of the
-    > thesis in the scientific domain.
+    > thesis in the scientific domain.**
 
 Face detection methods
 ----------------------
@@ -218,53 +218,53 @@ height="1.0666666666666667in"}
 
 Figure 1Basic Haar-like features \[1\]
 
-On the Figure 1 is can be seen what features are used to distinguish
-between light and dark spots on a picture. Although this can be
-misleading, what should be really be seen if understanding of the
-problem is a priority, is to see the image in a way shown in Figure 2.
+> On the Figure 1 is can be seen what features are used to distinguish
+> between light and dark spots on a picture. Although this can be
+> misleading, what should be really be seen if understanding of the
+> problem is a priority, is to see the image in a way shown in Figure 2.
 
 ![https://4.bp.blogspot.com/-bnLjamBCFxo/W8VhoCS2ryI/AAAAAAAAByA/raSrnduCbwog3mHq0cYslpZMoQyhTVkqACLcBGAs/s1600/Screenshot%2Bfrom%2B2018-10-16%2B09-27-00.png](media/image3.png){width="2.1145833333333335in"
 height="2.8229166666666665in"}
 
 Figure 2Haar-like feature on face \[5\]
 
-The colors itself are not important, but the pixel values within. For
-example, if face is to be found, it can be safely assumed, that forehead
-pixels will be on average brighter than pixels that are within eyes
-region, due to the shadow dropping from the eyebrows. The same goes
-mostly for things like nose, where either vertical line, that is bright
-and has darker surroundings due to the shadows. But this is also
-something that needs to be taken with care, due to the changing light
-conditions. Compensation can be done, by looking for white line that has
-a darker region only on one side.
-
-There were taken many approaches to improve initial Viola and Jones,
-including the Viola himself. One of the first successful improvements
-were made only one year later, by the R. Lienhart and J. Maydt \[6\].
-They were dealing with two main problems of original approach, by adding
-45 rotated features and adding new optimization procedures for improved
-performance.
+> The colors itself are not important, but the pixel values within. For
+> example, if face is to be found, it can be safely assumed, that
+> forehead pixels will be on average brighter than pixels that are
+> within eyes region, due to the shadow dropping from the eyebrows. The
+> same goes mostly for things like nose, where either vertical line,
+> that is bright and has darker surroundings due to the shadows. But
+> this is also something that needs to be taken with care, due to the
+> changing light conditions. Compensation can be done, by looking for
+> white line that has a darker region only on one side.
+>
+> There were taken many approaches to improve initial Viola and Jones,
+> including the Viola himself. One of the first successful improvements
+> were made only one year later, by the R. Lienhart and J. Maydt \[6\].
+> They were dealing with two main problems of original approach, by
+> adding 45 rotated features and adding new optimization procedures for
+> improved performance.
 
 ![](media/image4.png){width="3.4905653980752405in"
 height="2.8991087051618547in"}
 
 Figure 3Extended features proposed by Lienhart and Maydt \[6\]
 
-Further attempts of improvements can be observed. T. Mita, T. Kaneko and
-O. Hori proposed and derived method of detecting co-occurrence of
-features. One of the things that are addressed by those authors, is that
-in original solution, after detecting one feature, detecting of
-proceeding ones comes with much higher error rate \[7\].
+> Further attempts of improvements can be observed. T. Mita, T. Kaneko
+> and O. Hori proposed and derived method of detecting co-occurrence of
+> features. One of the things that are addressed by those authors, is
+> that in original solution, after detecting one feature, detecting of
+> proceeding ones comes with much higher error rate \[7\].
 
 ![](media/image5.png){width="4.010416666666667in"
 height="2.3187139107611547in"}
 
 Figure 4 Joint Haar-Like feature
 
-This approach allows to capture more of a structural similarity of
-faces. Experiment results give reduced error rates and improved
-performance, even when considering bigger number of features, than in
-Viola and Jones solution.
+> This approach allows to capture more of a structural similarity of
+> faces. Experiment results give reduced error rates and improved
+> performance, even when considering bigger number of features, than in
+> Viola and Jones solution.
 
 Face recognition methods
 ------------------------
@@ -323,12 +323,12 @@ projected, to find weights, or similarities in other words.
 
 #### Fisherfaces
 
-Fisherfaces are similar to Eigenfaces. Method uses both principal
-component analysis and linear discriminant analysis and produce a
-subspace projection matrix. It is minimizing variation within classes
-and maximizing separation. It should provide better results when it
-comes to different facial expressions and light variance. Although
-computation time is more complex, and time needed is greater \[13\].
+> Fisherfaces are similar to Eigenfaces. Method uses both principal
+> component analysis and linear discriminant analysis and produce a
+> subspace projection matrix. It is minimizing variation within classes
+> and maximizing separation. It should provide better results when it
+> comes to different facial expressions and light variance. Although
+> computation time is more complex, and time needed is greater \[13\].
 
 ### Hybrid approaches
 
@@ -371,22 +371,41 @@ tough task, especially when within- class variance is big.
 
 #### Artificial neural networks
 
-Inspired by the biological nervous system and the way it works. This
-solution aims to solve non-linear problems. Artificial neural networks
-are in fact an interconnected web of so-called neurons. Each of the
-neurons performs little operations that adjusts weights, so that desired
-output is shown. Training is often accomplished by feeding the neural
-network with patterns
+> Inspired by the biological nervous system and the way it works. This
+> solution aims to solve non-linear problems. Artificial neural networks
+> are in fact an interconnected web of so-called neurons. Each of the
+> neurons performs little operations that adjusts weights, so that
+> desired output is shown. Training is often accomplished by feeding the
+> neural network with patterns
 
 #### Fuzzy logic
 
-This is an approach mimicking human knowledge, that is naturally
-imprecise. It introduces concept of partial truth and false. That is due
-to the fact that most of the human body properties are nonlinear and
-trimming them down to linear solutions makes them often impossible to
-achieve high accuracy \[18\]. This method is often incorporated as a
-part of recognition process with other methods. For example, fuzzy
-k-nearest neighbor classification to find suitable scatter matrices.
+> This is an approach mimicking human knowledge, that is naturally
+> imprecise. It introduces concept of partial truth and false. That is
+> due to the fact that most of the human body properties are nonlinear
+> and trimming them down to linear solutions makes them often impossible
+> to achieve high accuracy \[18\]. This method is often incorporated as
+> a part of recognition process with other methods. For example, fuzzy
+> k-nearest neighbor classification to find suitable scatter matrices.
+
+#### Genetic algorithms
+
+> Genetic algorithm approaches derive its ide from natural evolution. It
+> is based on inheritance, mutation, natural selection, recombination,
+> where goal is to select fittest solution. It is randomized, but also
+> directed.
+>
+> Some terms are needed for further explanation to understand basics of
+> those solutions. Chromosomes are set of genes, and gene contains part
+> of the solution. Fitness describes closeness to solution, and its
+> function assign fitness value to individual. Mutation is a change in
+> random gene, crossover is an operation to create new chromosomes for
+> offspring, the better they are, the better chance of "surviving" they
+> have \[19\].
+>
+> Solutions can be found where GA solutions are mixed with other
+> approaches, for example systems where principal component analysis is
+> used for feature extraction and Genetic Algorithm to recognize \[19\].
 
 Requirements and tools 
 =======================
@@ -397,11 +416,176 @@ This chapter contains following elements:
 
 -   use cases (UML diagrams),
 
--   description of tools,
+-   [description of tools,]{.underline}
 
 -   methodology of design and implementation.
 
-.
+Requirements
+------------
+
+### Functional requirements
+
+> Basic database of photos should be easy to provide by the user to the
+> given folder. Every photo needs to contain one face, preferably with
+> good lighting. Phots should be grouped in folders, one folder to one
+> person that detection will be take place on. Folders should be named
+> accordingly, uniquely and describe the person, as this name will be
+> used to recognize given face. Every folder should contain the same
+> number of photos, to allow the training process to achieve best
+> performance.
+>
+> Aligned and processed images should be placed in a separate folder,
+> with the same labels, segregated in folders the same way as before the
+> processing.
+>
+> The application should provide possibility to specify video sequence
+> that will be further processed as a string of characters.
+>
+> Face on a processed video media should be tracked and clearly marked
+> with a square shaped box. Above the square should be a text with the
+> prediction result, that is name of the face owner. Text should be
+> readable both when the face detected is far, so the square and text
+> above is small, and when the face is close, and the text could be too
+> big to fit into the screen.
+>
+> Output video after face detection should be placed in separate folder
+> marked as the output videos, with each video named the same way as
+> before processing with "output" appended to the original title to be
+> easily distinguished.
+
+### Non-functional requirements
+
+Use cases
+---------
+
+Tools
+-----
+
+### Programming language
+
+#### Research results
+
+In data processing, especially in image processing there are a few most
+viable options when it comes to programming languages. There are
+basically four different options available.
+
+First option is Java language that comes with two libraries that would
+help with writing this thesis. Wrapper for OpenCV and native JavaCV.
+However, due to the lack of experience and personal preferences, choice
+was made not to use Java for development.
+
+MATLAB is a really powerful tool and can be successfully used for tasks
+like image processing. There are toolboxes available, that further
+extend possibilities, for example image processing toolbox, computer
+vision toolbox and many more. Also, the program allows for easy access
+to data, and easy visualization, with simple methods. MATLAB also
+supports OpenCV which is a next huge advantage. It also comes with a
+great documentation. However, cost of the software is enormous for an
+ordinary user, that completely brought chances of using this tool to
+zero percent \[20\].
+
+More of a low-level approach would be to use C++, it comes with a great
+support of OpenCV and great performance. Although, it comes with
+responsibility of managing memory.
+
+#### Language of choice
+
+Language of choice for this project was Python. It is widely used in
+data science field, due to the huge number of libraries and supportive
+community. There are a few advantages that decided for this language to
+be used.
+
+The cleanness of language -- this was the main purpose while Python was
+designed. To keep it simple, consistent and compact, which is already a
+distinctive feature in a programming world. Code is easy to write and
+easy to read, and this makes it really great for code maintenance. Yet,
+it was designed to fully support Object Oriented Programming,
+imperative, procedural and functional programming.
+
+Efficiency of prototyping -- This is a dynamic type language, which
+means, that there are no strict types defined. Of course, they are
+assigned later, during interpreting, but a programmer doesn't have to
+think about that while creating the code. Python code is often much
+shorter, which further extends ease of upkeeping clean code.
+
+Portability -- Python code is multiplatform for most part. It can be
+easily executed on many different platforms. It allows not only to make
+graphical user interface applications, but also web applications. This
+makes it a universal tool for many applications.
+
+Libraries -- Python offers great number of libraries that makes it
+really easy to develop applications. This includes web development like
+Django or Flask, calculations like NumPy, game development like Pygame
+and many more.
+
+Quality of code -- On the base of Python stands so-called Zen of Python
+(PEP 20), that includes aphorisms like "Beautiful is better than ugly"
+or "complex is better than complicated" or "readability counts". It has
+also a lot of other PEP rules defining style convention of Python like
+PEP 8, where it is defined how many spaces for indentation level,
+maximum line length or occurrence of white spaces. Even though there are
+a lot of rules, most of IDE (programming environments) give possibility
+to install extensions that keep track of those rules and often even
+automatically correct them. This makes Python code very universal and
+easy to read among developers.
+
+### Libraries
+
+#### OpenCV
+
+It's an open source, free for commercial and educational use library. It
+was written in C and C++ and is developed using wrappers in a lot of
+programming languages like C\#, Python, MATLAB, Java. One of the great
+advantages of this library possible multiplatform usage. It's compatible
+with Windows, Mac OS X, Linux, Android and iOS.
+
+Library was created to serve in real-time applications, where computing
+efficiency is a main issue. C and C++ as a relatively low-level language
+gives possibility to optimize and use multicore processor units.
+
+One of the main goals of OpenCV is to provide an all in one tool that
+would allow to easily create advanced projects by people on different
+knowledge levels. It can be easily use both for educating beginners, but
+it also gives the professionals to use advanced tools without
+reinventing the wheel.
+
+####  NumPy
+
+NumPy package is a basic Python tool that allows for advanced
+mathematical calculations, mainly for scientific purposes like numerical
+methods, operations on matrixes, diagonalization, integration, solving
+of equations and so on.
+
+One of the basic objects that is introduced by NumPy is ndarray. It can
+be treated as a universal container for data in form of vectors or
+arrays. The main difference between arrays provided by ndarray and
+default Python arrays is that objects inside needs to be the same type,
+they keep their size, while changing size new object is being created,
+and old is removed, objects contain functions to operate on contained
+data, optimized to use on big datasets.
+
+#### Matplotlib
+
+Powerful and rich library used for plotting and data visualization. It
+produces 2D graphics in interactive environments. It allows to draw
+graphs like lines, scattered, bar and many more.
+
+Matplotlib has Pyplot module that provide MATLAB-like interface. Which
+makes it easy for developers moving from that environment to begin. It
+also has object-oriented API to easily embed plotting into graphical
+interfaces like Qt or Tkinter.
+
+It can be also extended to use with Microsoft Excel, or to create 3D
+plots by using mplot3d. Active group of developers comes also with great
+profit with constant support and big community.
+
+#### Scikit-learn
+
+Package that provides simple and efficient tools for data mining and
+analysis. Includes various classification, regression, clustering
+algorithms including support vector machines, random forests, gradient
+boosting, k-means and more. It is also built upon and designed to
+cooperate with other scientific libraries like NumPy and SciPy.
 
 External specification 
 =======================
@@ -426,12 +610,10 @@ This chapter contains following elements:
 
 -   working scenarios (with screenshots or output files).
 
-The entire document should contain references to the illustrations
-contained therein (Fig. 4.1).
+### Requirements
 
-  ![](media/image6.png){width="3.0625in" height="2.46875in"}
-  ------------------------------------------------------------
-  Fig.4.1. *The variation funkstioni*
+  --
+  --
 
 Internal specification
 ======================
