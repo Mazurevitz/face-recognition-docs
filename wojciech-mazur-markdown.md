@@ -58,15 +58,15 @@ Contents {#contents .TOCHeading}
 
 [2. \[Problem analysis\] 5](#problem-analysis)
 
-[3. Requirements and tools 13](#requirements-and-tools)
+[3. Requirements and tools 14](#requirements-and-tools)
 
-[4. External specification 16](#external-specification)
+[4. External specification 21](#external-specification)
 
-[5. Internal specification 19](#internal-specification)
+[5. Internal specification 30](#internal-specification)
 
-[6. Verification and validation 22](#verification-and-validation)
+[6. Verification and validation 33](#verification-and-validation)
 
-[7. Conclusions 25](#conclusions)
+[7. Conclusions 36](#conclusions)
 
 [Bibliography **Error! Bookmark not defined.**](#_Toc526891489)
 
@@ -921,11 +921,6 @@ On the output video sequence, clear square can bee seen and the face
 that is detected, and then processed to show predicted name of the
 person.
 
-![](media/image6.png){width="4.808695319335083in"
-height="2.6667497812773404in"}
-
-Figure BBC America interview material
-
   --
   --
 
@@ -956,6 +951,93 @@ Longer fragments should be written in *Courier* or *Courier New* font
 size 10 in frames (Listing 4.1) with a space between the lines of the
 value 1. All lines of code should be numbered so that they can be
 referenced in the text of the document.
+
+Application internal details
+----------------------------
+
+### Face image processing
+
+First file that user needs to run is a file responsible for cropping
+images of people, so that only the processed image of a face is saved.
+To detect the face first method that is used, is previously described
+haar-like cascades classifier, with proper xml file that will allow to
+quickly find location of frontal part of face. The loop is recursively
+walking though folders from image folders, reading labels, which is used
+to identify recognized person later, and put that on a video material
+above the face.
+
+Haar-like cascades method works in greyscale, so the next step is image
+being changed to greyscale from blue green red scale, which is provided
+by the OpenCV library. Then, detector tries to find a face on a given
+image, where two arguments are being used, scaleFactor and minNeighbors.
+ScaleFactor parameter is specifying how much the image size is reduced
+at each image scale, minNeighbors specifies how many neighbors each
+candidate rectangle should have to retain it \[21\]. Those parameters
+often need to be checked manually, as there is no one given indicator of
+how well they will perform on a chosen material.
+
+One of the anchors that can be used to align a face image, are eyes, and
+they were chosen in this thesis. Again, a haar-like classifier is used,
+but this time with a different xml file. To reduce possibility of false
+positive, eyes are only detected on a surface, where face was previously
+detected. If there was only one eye detected, it is being ignored and no
+alignment is applied. If there are two eyes detected, angle between them
+is calculated, but the result is returned in radians, so multiplication
+is required.
+
+$$\operatorname{}{\left( x1 - x2\ ,\ y1 - y2 \right)*\frac{180}{\pi}}$$
+
+Then, a few rules are being applied to filter whether the eyes that were
+detected, are not a false positive. Assuming that pictures are of the
+people with the face only in position more or less perpendicularly to
+the bottom of the image, when rotation above 20 degrees is detected, it
+is zeroed. Python atan2 function is working in such a way, that
+depending on which eye is higher, whether right or left, arctan value
+differs and function can also return a big negative number like -177.
+With such value rotation matrix that is further calculated would flip
+image about upside down. To adjust that value $\frac{\pi}{2} - 177$
+would be applied.
+
+Taking above angle, rotation matrix is calculated and applied to the
+photo. Although to avoid black corners that appear when rotation is
+applied to previously cut photo, rotation is applied to the main photo
+before the face cutout and the procedure with looking for the face is
+retried. To avoid noises and training algorithm with unnecessary details
+Gaussian blur is applied. Also, histogram normalization method is
+applied, to emphasize the most distinct spots.
+
+Last operation is to create a separate folder that processed images will
+be stored in. Every face picture has the same height and width, that is
+previously set in the program code. Images are saved in folders, that
+are named the same as the folders that they were originally stored in.
+
+### Training recognizer
+
+Second file available for user is a file that launches training process.
+OpenCV makes this process very straightforward. There is Eigenface
+Recognizer method used to create an object that contains train method.
+Then, previously created and aligned images are walked though, and based
+on the names of folders labels are created. Every image is appended to
+an array both with label. Then, train method with two previously created
+arrays is called and then save method is called to save trainer to yml
+file.
+
+### Video processing
+
+OpenCV provides VideoCapture function where name of the file to be
+processed can be specified. Then, haar-like cascade classifier is
+created to find faces on the image. Then, again Eigenface recognizer is
+created and previously created trainer.yml file can be read. This will
+allow to recognize already trained faces. A loop is used to iterate
+though every frame of the video. Each frame is put though following
+procedure. It is transformed to greyscale, and faces are detected by
+cascades method.
+
+For reach face there is a prediction made, thanks to the predict
+function from recognizer object. Each recognition is compared to the
+predefined values with coordinates for each person that are manually
+provided, to test accuracy. Then, prediction is printed on the frame,
+above face of given person, with coordinates visible.
 
 Listing 1. Generating random numbers
 
