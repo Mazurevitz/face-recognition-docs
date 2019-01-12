@@ -622,9 +622,8 @@ This chapter contains following elements:
 
 -   working scenarios (with screenshots or output files).
 
-### Requirements
-
-#### Software requirements
+Software requirements
+---------------------
 
 The application was implemented using Python language, which means that
 it should be compatible with many different platforms, like Mac OS X,
@@ -636,7 +635,8 @@ distribution for Python and R for scientific computing. Installation of
 this package would simplify the whole process of setting up the
 environment needed to run the program. It is also cross-platform.
 
-#### Installation process
+Installation process
+--------------------
 
 Application described is a concept, that could be incorporated into
 bigger system, but not a standalone application per se, which means that
@@ -744,151 +744,151 @@ executed with given requirements file conda create \--name \<envname\>
 \--file requirements.txt. Where \<envname\> is a name that environment
 will be given.
 
-\# This file may be used to create an environment using:
-
-\# \$ conda create \--name \<env\> \--file \<this file\>
-
-\# platform: win-64
-
-astroid=2.1.0=py36\_1000
-
-basemap=1.2.0=py36h4e5d7af\_0
-
-blas=1.0=mkl
-
-ca-certificates=2018.03.07=0
-
-certifi=2018.10.15=py36\_0
-
-cloudpickle=0.6.1=py36\_0
-
-colorama=0.4.0=py\_0
-
-cycler=0.10.0=py\_1
-
-dask-core=1.0.0=py36\_0
-
-decorator=4.3.0=py36\_0
-
-dlib=19.9=np111py36\_0
-
-face\_recognition\_models=0.3.0=pyh0cf5a0c\_0
-
-freetype=2.9.1=he8b6a0d\_1004
-
-geos=3.6.2=h9ef7328\_2
-
-hdf5=1.8.20=hac2f561\_1
-
-icc\_rt=2017.0.4=h97af966\_0
-
-icu=58.2=ha66f8fd\_1
-
-imageio=2.4.1=py36\_0
-
-intel-openmp=2019.0=118
-
-isort=4.3.4=py36\_1000
-
-jpeg=9c=hfa6e2cd\_1001
-
-kiwisolver=1.0.1=py36he980bc4\_1002
-
-lazy-object-proxy=1.3.1=py36hfa6e2cd\_1000
-
-libopencv=3.4.2=h20b85fd\_0
-
-libpng=1.6.34=h7602738\_2
-
-libtiff=4.0.9=h36446d0\_1002
-
-libwebp=0.5.2=7
-
-matplotlib=2.2.3=py36h31860fd\_0
-
-mccabe=0.6.1=py\_1
-
-mkl=2018.0.3=1
-
-mkl\_fft=1.0.10=py36\_0
-
-mkl\_random=1.0.2=py36\_0
-
-networkx=2.2=py36\_1
-
-numpy=1.11.3=py36h4a99626\_4
-
-numpy-base=1.15.4=py36h8128ebf\_0
-
-olefile=0.46=py36\_0
-
-opencv=3.4.3=py36h597e314\_201
-
-openssl=1.0.2p=hfa6e2cd\_0
-
-pillow=5.3.0=py36hdc69c19\_0
-
-pip=18.1=py36\_1000
-
-proj4=5.1.0=hfa6e2cd\_1
-
-py-opencv=3.4.2=py36hc319ecb\_0
-
-pylint=2.2.2=py36\_1000
-
-pyparsing=2.3.0=py\_0
-
-pyproj=1.9.5.1=py36hb98d9bb\_1
-
-pyqt=5.6.0=py36h764d66f\_1007
-
-pyshp=1.2.12=py36\_0
-
-python=3.6.6=he025d50\_0
-
-python-dateutil=2.7.5=py\_0
-
-pytz=2018.7=py\_0
-
-pywavelets=1.0.1=py36h8c2d366\_0
-
-qt=5.6.2=h2639256\_8
-
-scikit-image=0.14.0=py36h6538335\_1
-
-scikit-learn=0.20.1=py36hb854c30\_0
-
-scipy=1.1.0=py36hc28095f\_0
-
-setuptools=40.6.2=py36\_0
-
-sip=4.18.1=py36h6538335\_0
-
-six=1.11.0=py36\_1001
-
-sqlite=3.26.0=hfa6e2cd\_1000
-
-tk=8.6.8=hfa6e2cd\_0
-
-toolz=0.9.0=py36\_0
-
-tornado=5.1.1=py36hfa6e2cd\_1000
-
-typed-ast=1.1.0=py36hfa6e2cd\_1000
-
-vc=14.1=h21ff451\_3
-
-vs2015\_runtime=15.5.2=3
-
-wheel=0.32.3=py36\_0
-
-wincertstore=0.2=py36\_1002
-
-wrapt=1.10.11=py36hfa6e2cd\_1001
-
-zlib=1.2.11=h2fa13f4\_1003
-
-#### User manual
++----+----------------------------------------------------------+
+| 1  | \# This file may be used to create an environment using: |
+|    |                                                          |
+| 2  | \# \$ conda create \--name \<env\> \--file \<this file\> |
+|    |                                                          |
+| 3  | \# platform: win-64                                      |
+|    |                                                          |
+| 4  | astroid=**2.1**.**0**=py36\_1000                         |
+|    |                                                          |
+| 5  | basemap=**1.2**.**0**=py36h4e5d7af\_0                    |
+|    |                                                          |
+| 6  | blas=**1.0**=mkl                                         |
+|    |                                                          |
+| 7  | ca-certificates=**2018.03**.**07**=**0**                 |
+|    |                                                          |
+| 8  | certifi=**2018.10**.**15**=py36\_0                       |
+|    |                                                          |
+| 9  | cloudpickle=**0.6**.**1**=py36\_0                        |
+|    |                                                          |
+| 10 | colorama=**0.4**.**0**=py\_0                             |
+|    |                                                          |
+| 11 | cycler=**0.10**.**0**=py\_1                              |
+|    |                                                          |
+| 12 | dask-core=**1.0**.**0**=py36\_0                          |
+|    |                                                          |
+| 13 | decorator=**4.3**.**0**=py36\_0                          |
+|    |                                                          |
+| 14 | dlib=**19.9**=np111py36\_0                               |
+|    |                                                          |
+| 15 | face\_recognition\_models=**0.3**.**0**=pyh0cf5a0c\_0    |
+|    |                                                          |
+| 16 | freetype=**2.9**.**1**=he8b6a0d\_1004                    |
+|    |                                                          |
+| 17 | geos=**3.6**.**2**=h9ef7328\_2                           |
+|    |                                                          |
+| 18 | hdf5=**1.8**.**20**=hac2f561\_1                          |
+|    |                                                          |
+| 19 | icc\_rt=**2017.0**.**4**=h97af966\_0                     |
+|    |                                                          |
+| 20 | icu=**58.2**=ha66f8fd\_1                                 |
+|    |                                                          |
+| 21 | imageio=**2.4**.**1**=py36\_0                            |
+|    |                                                          |
+| 22 | intel-openmp=**2019.0**=**118**                          |
+|    |                                                          |
+| 23 | isort=**4.3**.**4**=py36\_1000                           |
+|    |                                                          |
+| 24 | jpeg=**9**c=hfa6e2cd\_1001                               |
+|    |                                                          |
+| 25 | kiwisolver=**1.0**.**1**=py36he980bc4\_1002              |
+|    |                                                          |
+| 26 | lazy-object-proxy=**1.3**.**1**=py36hfa6e2cd\_1000       |
+|    |                                                          |
+| 27 | libopencv=**3.4**.**2**=h20b85fd\_0                      |
+|    |                                                          |
+| 28 | libpng=**1.6**.**34**=h7602738\_2                        |
+|    |                                                          |
+| 29 | libtiff=**4.0**.**9**=h36446d0\_1002                     |
+|    |                                                          |
+| 30 | libwebp=**0.5**.**2**=**7**                              |
+|    |                                                          |
+| 31 | matplotlib=**2.2**.**3**=py36h31860fd\_0                 |
+|    |                                                          |
+| 32 | mccabe=**0.6**.**1**=py\_1                               |
+|    |                                                          |
+| 33 | mkl=**2018.0**.**3**=**1**                               |
+|    |                                                          |
+| 34 | mkl\_fft=**1.0**.**10**=py36\_0                          |
+|    |                                                          |
+| 35 | mkl\_random=**1.0**.**2**=py36\_0                        |
+|    |                                                          |
+| 36 | networkx=**2.2**=py36\_1                                 |
+|    |                                                          |
+| 37 | numpy=**1.11**.**3**=py36h4a99626\_4                     |
+|    |                                                          |
+| 38 | numpy-base=**1.15**.**4**=py36h8128ebf\_0                |
+|    |                                                          |
+| 39 | olefile=**0.46**=py36\_0                                 |
+|    |                                                          |
+| 40 | opencv=**3.4**.**3**=py36h597e314\_201                   |
+|    |                                                          |
+| 41 | openssl=**1.0**.**2**p=hfa6e2cd\_0                       |
+|    |                                                          |
+| 42 | pillow=**5.3**.**0**=py36hdc69c19\_0                     |
+|    |                                                          |
+| 43 | pip=**18.1**=py36\_1000                                  |
+|    |                                                          |
+| 44 | proj4=**5.1**.**0**=hfa6e2cd\_1                          |
+|    |                                                          |
+| 45 | py-opencv=**3.4**.**2**=py36hc319ecb\_0                  |
+|    |                                                          |
+| 46 | pylint=**2.2**.**2**=py36\_1000                          |
+|    |                                                          |
+| 47 | pyparsing=**2.3**.**0**=py\_0                            |
+|    |                                                          |
+| 48 | pyproj=**1.9**.**5.1**=py36hb98d9bb\_1                   |
+|    |                                                          |
+| 49 | pyqt=**5.6**.**0**=py36h764d66f\_1007                    |
+|    |                                                          |
+| 50 | pyshp=**1.2**.**12**=py36\_0                             |
+|    |                                                          |
+| 51 | python=**3.6**.**6**=he025d50\_0                         |
+|    |                                                          |
+| 52 | python-dateutil=**2.7**.**5**=py\_0                      |
+|    |                                                          |
+| 53 | pytz=**2018.7**=py\_0                                    |
+|    |                                                          |
+| 54 | pywavelets=**1.0**.**1**=py36h8c2d366\_0                 |
+|    |                                                          |
+| 55 | qt=**5.6**.**2**=h2639256\_8                             |
+|    |                                                          |
+| 56 | scikit-image=**0.14**.**0**=py36h6538335\_1              |
+|    |                                                          |
+| 57 | scikit-learn=**0.20**.**1**=py36hb854c30\_0              |
+|    |                                                          |
+| 58 | scipy=**1.1**.**0**=py36hc28095f\_0                      |
+|    |                                                          |
+| 59 | setuptools=**40.6**.**2**=py36\_0                        |
+|    |                                                          |
+| 60 | sip=**4.18**.**1**=py36h6538335\_0                       |
+|    |                                                          |
+| 61 | six=**1.11**.**0**=py36\_1001                            |
+|    |                                                          |
+| 62 | sqlite=**3.26**.**0**=hfa6e2cd\_1000                     |
+|    |                                                          |
+| 63 | tk=**8.6**.**8**=hfa6e2cd\_0                             |
+|    |                                                          |
+| 64 | toolz=**0.9**.**0**=py36\_0                              |
+|    |                                                          |
+| 65 | tornado=**5.1**.**1**=py36hfa6e2cd\_1000                 |
+|    |                                                          |
+| 66 | typed-ast=**1.1**.**0**=py36hfa6e2cd\_1000               |
+|    |                                                          |
+| 67 | vc=**14.1**=h21ff451\_3                                  |
+|    |                                                          |
+| 68 | vs2015\_runtime=**15.5**.**2**=**3**                     |
+|    |                                                          |
+| 69 | wheel=**0.32**.**3**=py36\_0                             |
+|    |                                                          |
+| 70 | wincertstore=**0.2**=py36\_1002                          |
+|    |                                                          |
+| 71 | wrapt=**1.10**.**11**=py36hfa6e2cd\_1001                 |
+|    |                                                          |
+| 72 | zlib=**1.2**.**11**=h2fa13f4\_1003                       |
++----+----------------------------------------------------------+
 
 After installing above listed software, user should test if the
 environment is correctly prepared, by conda list command, and check if
@@ -911,7 +911,8 @@ python file. To cut and align images facescropper.py should be executed,
 next user should train the recognizer by using faces-train.py, and the
 last should be facesrec-video.py.
 
-#### Example output files
+Example output files
+--------------------
 
 After loading, cutting, aligning photos and training model, next file
 should be executed. Processing the output video will take proportional
@@ -1039,73 +1040,95 @@ predefined values with coordinates for each person that are manually
 provided, to test accuracy. Then, prediction is printed on the frame,
 above face of given person, with coordinates visible.
 
-Listing 1. Generating random numbers
-
-+----+--------------------------------------------------------+
-| 1  | **package** polsl.iinf.lab;                            |
-|    |                                                        |
-| 2  | **import** java.util.Random;                           |
-|    |                                                        |
-| 3  | **public** **class** Main {                            |
-|    |                                                        |
-| 4  | **public** **static** **void** main(String\[\] args) { |
-|    |                                                        |
-| 5  | Random r = **new** Random();                           |
-|    |                                                        |
-| 6  | // drawing a number from the range 1..10               |
-|    |                                                        |
-| 7  | **int** a = r.nextInt(10 + 1);                         |
-|    |                                                        |
-| 8  | System.*out*.println(a);                               |
-|    |                                                        |
-| 9  | // drawing a number from the range -5..15              |
-|    |                                                        |
-| 10 | System.*out*.println(r.nextInt(21) - 5);               |
-|    |                                                        |
-| 11 | }                                                      |
-|    |                                                        |
-| 12 | }                                                      |
-|    |                                                        |
-| 13 |                                                        |
-|    |                                                        |
-| 14 |                                                        |
-|    |                                                        |
-| 15 |                                                        |
-|    |                                                        |
-| 16 |                                                        |
-|    |                                                        |
-| 17 |                                                        |
-+----+--------------------------------------------------------+
-
 Verification and validation
 ===========================
 
-This chapter contains following elements:
+Verification procedure
+----------------------
 
--   testing paradigm (eg. V model),
+> Main focus of verification was to check how many frames of the video
+> material has correctly recognized face. For each frame in a video
+> haar-like cascade classifier tries to detect a face, and for each
+> detection, a prediction made by using Eigenface method. To test
+> whether the prediction is correct there were few steps taken. Each
+> frame has a few predefined properties. Name of the person that the
+> face is appearing at the given frame, and its location as coordinates
+> of the video sequence. There is also an offset that can be set,
+> assuming that not only the expression of the face is changing, but
+> also its location.
+>
+> For each frame confidence of detection is saved. Then, it can be used
+> to set the threshold and filter predictions with low confidence. Each
+> prediction is compared with previously set threshold and set to true
+> or negative. Threshold testing is in range from the lowest possible
+> prediction value to the highest that the algorithm calculated during
+> recognition phase.
 
--   test cases, testing scope (full / partial),
+Verification results
+--------------------
 
--   detected and fixed bugs,
+For the previously prepared video with three faces appearing one by one
+the recognition rate was quite satisfying. Correct recognition was
+performed in 80.7% of the frames of the video. It should be noted, that
+video material was containing faces that were turned straight into the
+camera and with a good lighting. In 12% of the frames haar-cascade
+classifier didn't manage to detect a face, so no prediction or it's
+accuracy could be measured. Wrongly recognized frames were only a 7.3%
+of the video, which could be treated a good outcome, considering that
+Eigenfaces is a rather simple classifier. When filtering out the frames
+where haar-like classifier didn't manage to detect a face, recognition
+on already detected face is a 91.7% which is even a better result.
 
--   results of experiments (optional).
+Then, extended version of a previous video was tested, and the results
+were very similar. Correct recognition was performed in 76.7% of frames.
+Wrong recognition was performed in 17.6% of the video and face was not
+located in 5.7% of the video. This translates into 81.3% of correct
+predictions considering only frames where the face was correctly
+detected.
+
+The ROC Curve was prepared for the system:
+
+![](media/image6.png){width="5.238888888888889in"
+height="4.163888888888889in"}
+
+Figure 5ROC Curve for Eigenface recognition
 
 Conclusions
 ===========
 
-This chapter contains following elements:
+The main goal in this thesis was to implement the Eigenface detection
+method in video sequence and interpretation of results. Work on thesis
+was proceeded in previously defined steps. The choice of the programming
+language was made first, to allow for a fluent workflow. Then, analysis
+of current solution was made, and haar-like cascades were chosen for a
+face detection, and Eigenface recognition method was chosen to recognize
+faces. Implementation of the algorithms was successful and allowed to
+test the performance on video sequences. All the requirements specified
+on the beginning of the thesis were successfully fulfilled.
 
--   achieved results with regard to objectives of the thesis and
-    > requirements,
+The process of implementing the recognition process was rather simple
+and straightforward. However, image processing came out to be more
+complicated, and this caused the drastic decrease of code quality. There
+should also be more tests with different lighting conditions, and the
+photo database could have been extended for better results.
 
--   path of further development (eg. functional extension . . . ),
+Further extensions should target improvement of time execution, as some
+of the image transformations were redundant. Quality of the video could
+be also much more lowered for the purpose of testing, and for increased
+speed of detection.
 
--   encountered difficulties and problems.
+Algorithms presented here can be easily implemented in a bigger system,
+for example for detection of dangerous people. It can also be extended
+to count attendance to school, or almost anywhere, where biological
+identification can be used to measure some statistics.
 
-Bibliography
+Bibliography {#bibliography .ListParagraph}
 ============
 
   -- --
+     
+     
+     
      
      
      
@@ -1173,9 +1196,19 @@ computing," w *12th International Conference on Application of Fuzzy
 Systems and Soft Computing*, Vienna, 2016. \[18\] M. H. Fadzil i L. C.
 Choon, „Face recognition system based on neural networks and fuzzy
 logic," w *Proceedings of International Conference on Neural Networks*,
-Houston, 1997. \[19\] G. M. Zafaruddin i H. S. Fadewar, „Face
-recognition: A holistic approach review," w *International Conference on
-Contemporary Computing and Informatics*, Mysore, 2014.
+Houston, 1997. \[19\] F. Mahmud, M. E. Haque, S. T. Zuhori i B. Pal,
+„Human Face Recognition Using PCA based Genetic," w *International
+Conference on Electrical Engineering and Information & Communication
+Technology*, Bangladesh, 2014. \[20\] S. Mallick, „Learn OpenCV," 30 10
+2015. \[Online\]. Available:
+https://www.learnopencv.com/opencv-c-vs-python-vs-matlab-for-computer-vision/.
+\[Data uzyskania dostępu: 6 1 2018\].\[21\] „docs.opencv," Intel
+Corporation, \[Online\]. Available:
+https://docs.opencv.org/2.4/modules/objdetect/doc/cascade\_classification.html.
+\[Data uzyskania dostępu: 10 January 2019\].\[22\] G. M. Zafaruddin i H.
+S. Fadewar, „Face recognition: A holistic approach review," w
+*International Conference on Contemporary Computing and Informatics*,
+Mysore, 2014.
 
 List of abbreviations and symbols {#list-of-abbreviations-and-symbols .ListParagraph}
 =================================
