@@ -54,51 +54,92 @@ inżynierskiej.
 Contents {#contents .TOCHeading}
 ========
 
-[1. Introduction 3](#introduction)
+[1. Introduction 1](#introduction)
 
-[2. \[Problem analysis\] 5](#problem-analysis)
+[1.1. Goal of the thesis 2](#goal-of-the-thesis)
 
-[3. Requirements and tools 14](#requirements-and-tools)
+[1.2. Scope of work 2](#scope-of-work)
 
-[4. External specification 21](#external-specification)
+[1.3. Description of chapters 3](#description-of-chapters)
 
-[5. Internal specification 30](#internal-specification)
+[2. Problem analysis 4](#problem-analysis)
 
-[6. Verification and validation 33](#verification-and-validation)
+[2.1. Face detection methods 4](#face-detection-methods)
 
-[7. Conclusions 36](#conclusions)
+[2.2. Face recognition methods 7](#face-recognition-methods)
 
-[Bibliography **Error! Bookmark not defined.**](#_Toc526891489)
+[2.2.1. Holistic approaches 8](#holistic-approaches)
+
+[2.2.2. Hybrid approaches 9](#hybrid-approaches)
+
+[2.2.3. Feature-based 9](#feature-based)
+
+[2.2.4. Soft computing methods 10](#soft-computing-methods)
+
+[3. Requirements and tools 11](#requirements-and-tools)
+
+[3.1. Requirements 12](#requirements)
+
+[3.1.1. Functional requirements 12](#functional-requirements)
+
+[3.1.2. Non-functional requirements 13](#non-functional-requirements)
+
+[3.2. Tools 13](#tools)
+
+[3.2.1. Programming language 13](#programming-language)
+
+[3.2.2. Libraries 15](#libraries)
+
+[3.2.3. Methodology of design and implementation
+17](#methodology-of-design-and-implementation)
+
+[3.3. Use cases 17](#use-cases)
+
+[4. External specification 19](#external-specification)
+
+[4.1. Software requirements 19](#software-requirements)
+
+[4.2. Installation process 19](#installation-process)
+
+[4.3. Example of usage 24](#example-of-usage)
+
+[4.4. Processing video sequence 25](#processing-video-sequence)
+
+[5. Internal specification 26](#internal-specification)
+
+[5.1. Application implementation details
+26](#application-implementation-details)
+
+[5.1.1. Face image processing 26](#face-image-processing)
+
+[5.1.2. Training recognizer 30](#training-recognizer)
+
+[5.1.3. Video processing 31](#video-processing)
+
+[6. Verification and validation 32](#verification-and-validation)
+
+[6.1. Verification procedure 32](#verification-procedure)
+
+[6.2. Verification results 33](#verification-results)
+
+[7. Conclusions 35](#conclusions)
+
+[Bibliography i](#_Toc535111836)
 
 [List of abbreviations and symbols
-iii](#list-of-abbreviations-and-symbols)
+iv](#list-of-abbreviations-and-symbols)
 
-[Contents of attached CD-ROM iv](#contents-of-attached-cd-rom)
+[Contents of attached CD-ROM v](#contents-of-attached-cd-rom)
 
-[List of Figures v](#list-of-figures)
+[List of Figures vi](#list-of-figures)
 
-[List of Tables vi](#list-of-tables)
+[List of Tables vii](#list-of-tables)
 
 **\
 **
 
 Introduction 
 =============
-
-This chapter contains following elements:
-
--   **introduction into the problem domain,**
-
--   **settling of the problem in the domain,**
-
--   **objective of the thesis,**
-
--   **scope of the thesis,**
-
--   short description of chapters,
-
--   clear description of contribution of the thesis's author -- in case
-    > of more authors table with enumeration of contribution of authors.
 
 > According to Maslow's Hierarchy of needs, safety is one of our most
 > fundamental needs. Without it, it is hard to think about friends,
@@ -168,21 +209,43 @@ Scope of work
 > were analyzed and graphically modified that the human can easily
 > observe effects of the detection and recognition in real time.
 
-\[Problem analysis\]
-====================
+Description of chapters
+-----------------------
 
-This chapter contains following elements:
+> Paper contains a few chapters that enclose the whole process of the
+> thesis. First chapter is an introduction with goal of the thesis
+> specified and scope of work described.
+>
+> Second chapter focuses on the problem analysis, with face detection
+> and recognition methods that were researched and their brief
+> description.
+>
+> Next chapter describes the requirements and tools that were specified
+> for the project, research that was made, and argumentation of
+> decisions made regarding technologies used.
+>
+> Fourth chapter describes the software requirements that need to be
+> fulfilled to use the project, and technical process of installing
+> required tools.
+>
+> In the fifth chapter there is a more in-depth description of the
+> algorithms used and code written with explanations why given rules
+> were applied.
+>
+> Sixth chapter characterize the verification and validation of the
+> project and what needed to be implemented, to measure accuracy of
+> predictions.
+>
+> Last chapter enclose the summary of the implementation process of the
+> project and condensed description of problems and further work.
 
--   **problem analysis,**
+Problem analysis
+================
 
--   **state of the art, problem statement,**
-
--   **literature research (all sources in the thesis have to be
-    > referenced \[1, 2, 4, 3\]),**
-
--   **description of existing solutions (also scientific ones, if the
-    > problem is scientifically researched), algorithms, location of the
-    > thesis in the scientific domain.**
+Problem analysis in this chapter revolves around the most important
+aspects of face detection and recognition methods. It introduces a few
+most popular methods both with a concise description of each and
+describes the results of the research that was performed.
 
 Face detection methods
 ----------------------
@@ -216,17 +279,17 @@ that was previously seen and is recognize for example as a face.
 ![](media/image2.png){width="5.236805555555556in"
 height="1.0666666666666667in"}
 
-Figure 1Basic Haar-like features \[1\]
+[]{#_Ref533875397 .anchor}Figure 1Basic Haar-like features \[1\]
 
 > On the Figure 1 is can be seen what features are used to distinguish
 > between light and dark spots on a picture. Although this can be
 > misleading, what should be really be seen if understanding of the
 > problem is a priority, is to see the image in a way shown in Figure 2.
 
-![https://4.bp.blogspot.com/-bnLjamBCFxo/W8VhoCS2ryI/AAAAAAAAByA/raSrnduCbwog3mHq0cYslpZMoQyhTVkqACLcBGAs/s1600/Screenshot%2Bfrom%2B2018-10-16%2B09-27-00.png](media/image3.png){width="2.1145833333333335in"
-height="2.8229166666666665in"}
+![](media/image3.png){width="2.4600360892388453in"
+height="2.4600360892388453in"}
 
-Figure 2Haar-like feature on face \[5\]
+[]{#_Ref533875707 .anchor}Figure 2Haar-like feature on face \[5\]
 
 > The colors itself are not important, but the pixel values within. For
 > example, if face is to be found, it can be safely assumed, that
@@ -245,10 +308,11 @@ Figure 2Haar-like feature on face \[5\]
 > adding 45 rotated features and adding new optimization procedures for
 > improved performance.
 
-![](media/image4.png){width="3.4905653980752405in"
-height="2.8991087051618547in"}
+![](media/image4.png){width="4.3048775153105865in"
+height="3.57544072615923in"}
 
-Figure 3Extended features proposed by Lienhart and Maydt \[6\]
+[]{#_Toc535110993 .anchor}Figure 3Extended features proposed by Lienhart
+and Maydt \[6\]
 
 > Further attempts of improvements can be observed. T. Mita, T. Kaneko
 > and O. Hori proposed and derived method of detecting co-occurrence of
@@ -256,10 +320,10 @@ Figure 3Extended features proposed by Lienhart and Maydt \[6\]
 > that in original solution, after detecting one feature, detecting of
 > proceeding ones comes with much higher error rate \[7\].
 
-![](media/image5.png){width="4.010416666666667in"
-height="2.3187139107611547in"}
+![](media/image5.png){width="5.156628390201225in"
+height="1.7142858705161854in"}
 
-Figure 4 Joint Haar-Like feature
+[]{#_Toc535110994 .anchor}Figure 4 Joint Haar-Like feature
 
 > This approach allows to capture more of a structural similarity of
 > faces. Experiment results give reduced error rates and improved
@@ -382,11 +446,11 @@ tough task, especially when within- class variance is big.
 
 > This is an approach mimicking human knowledge, that is naturally
 > imprecise. It introduces concept of partial truth and false. That is
-> due to the fact that most of the human body properties are nonlinear
-> and trimming them down to linear solutions makes them often impossible
-> to achieve high accuracy \[18\]. This method is often incorporated as
-> a part of recognition process with other methods. For example, fuzzy
-> k-nearest neighbor classification to find suitable scatter matrices.
+> since most of the human body properties are nonlinear and trimming
+> them down to linear solutions makes them often impossible to achieve
+> high accuracy \[18\]. This method is often incorporated as a part of
+> recognition process with other methods. For example, fuzzy k-nearest
+> neighbor classification to find suitable scatter matrices.
 
 #### Genetic algorithms
 
@@ -407,21 +471,21 @@ tough task, especially when within- class variance is big.
 > approaches, for example systems where principal component analysis is
 > used for feature extraction and Genetic Algorithm to recognize \[19\].
 
-Requirements and tools 
-=======================
+Requirements and tools
+======================
 
-This chapter contains following elements:
-
--   functional and nonfunctional requirements,
-
--   use cases (UML diagrams),
-
--   [description of tools,]{.underline}
-
--   methodology of design and implementation.
+> Clear requirements description is a good indicator of a direction of a
+> work. This chapter contains a few functional and non-functional
+> requirements that will define further work on the thesis. It also
+> describes the tools available in the market that would allow to
+> execute the requirements, and the arguments why given tools were used.
 
 Requirements
 ------------
+
+> Software requirements are a basis that specify what should be included
+> in a project. Early definition allows to easily avoid redesigns in
+> further stages of the development.
 
 ### Functional requirements
 
@@ -455,11 +519,24 @@ Requirements
 
 ### Non-functional requirements
 
-Use cases
----------
+> Application should be compatible with different sizes and qualities of
+> videos.
+>
+> Processed images should be loaded and exported to extensions of jpeg
+> format.
+>
+> Output photos and videos should be marked with "output" word.
+>
+> Recognized faces should be marked green, wrongly recognized red, and
+> false positive detections white on output video.
 
 Tools
 -----
+
+Before proceeding to the work, important part of the thesis was research
+about what tools are available, that would allow to finish the thesis
+goal efficiently and with a good result. Below, the research is
+presented with its results, tools of choice and why they were used.
 
 ### Programming language
 
@@ -597,30 +674,28 @@ To allow clear architecture of the project, separation of tasks in the
 design of application was applied. Every part has completely different
 responsibility and whole program is in a pipe form, but also allows to
 execute different parts separately, if user, for example wants only to
-process images.
+process images
+
+.
+
+Use cases
+---------
+
+Due to the simple nature of the program, and very limited interaction
+with the user, the UML diagram is very simple.
+
+![](media/image6.png){width="3.865972222222222in"
+height="5.223611111111111in"}
+
+[]{#_Toc535110995 .anchor}Figure 5Use cases UML
 
 External specification 
 =======================
 
-This chapter contains following elements:
-
--   hardware and software requirements,
-
--   installation procedure,
-
--   activation procedure,
-
--   types of users,
-
--   user manual,
-
--   system administration,
-
--   security issues,
-
--   example of usage,
-
--   working scenarios (with screenshots or output files).
+External specification of application describes the software
+requirements, what programs needs to be installed, and how to correctly
+perform the installation. There is also a process of executing the files
+described.
 
 Software requirements
 ---------------------
@@ -649,7 +724,8 @@ On the Table 1 list of needed packaged can be seen, although their
 number is great, most of them come with the Anaconda package, and the
 installation process is not that complicated.
 
-Table 1 List of libraries needed to run the program
+[]{#_Ref534597280 .anchor}Table 1 List of libraries needed to run the
+program
 
   **Name**                    **Version**    **Build**            **Channel**
   --------------------------- -------------- -------------------- -------------
@@ -743,6 +819,8 @@ To install all the dependencies at once, following command should be
 executed with given requirements file conda create \--name \<envname\>
 \--file requirements.txt. Where \<envname\> is a name that environment
 will be given.
+
+[]{#_Toc535110248 .anchor}Table 2 requirements.txt file
 
 +----+----------------------------------------------------------+
 | 1  | \# This file may be used to create an environment using: |
@@ -906,21 +984,25 @@ command, in terminal before the actual path, in parenthesis envname
 should be visible, indicating that user is currently using chosen
 environment.
 
+Example of usage
+----------------
+
 Next command is python \<file\_name\> that is used to execute given
 python file. To cut and align images facescropper.py should be executed,
 next user should train the recognizer by using faces-train.py, and the
 last should be facesrec-video.py.
 
-Example output files
---------------------
+Processing video sequence
+-------------------------
 
 After loading, cutting, aligning photos and training model, next file
-should be executed. Processing the output video will take proportional
-amount of time to input video length and its bitrate.
+should be executed. Processing the input video will take proportional
+amount of time to video length and its bitrate.
 
-On the output video sequence, clear square can bee seen and the face
-that is detected, and then processed to show predicted name of the
-person.
+On the output video sequence, if there is a face visible and correctly
+detected, square around that face should be visible. Inside this square,
+prediction is made, and its results are displayed above the square, with
+predicted name of the person and confidence of prediction.
 
   --
   --
@@ -928,33 +1010,17 @@ person.
 Internal specification
 ======================
 
-This chapter contains following elements:
+This part is describing the internal workings of the system. The most
+important functionalities of code are explained and examples of
+processes taking place during scripts working are given.
 
--   concept of the system,
+Application implementation details
+----------------------------------
 
--   system architecture,
-
--   description of data structures (and data bases),
-
--   components, modules, libraries, resume of important classes (if
-    > used),
-
--   resume of important algorithms (if used),
-
--   details of implementation of selected parts,
-
--   applied design patterns,
-
--   UML diagrams.
-
-A short code insertion in the text line is possible, e.g. class Main.
-Longer fragments should be written in *Courier* or *Courier New* font
-size 10 in frames (Listing 4.1) with a space between the lines of the
-value 1. All lines of code should be numbered so that they can be
-referenced in the text of the document.
-
-Application internal details
-----------------------------
+There are three most important steps described as separate subtopics.
+Description of image processing, with examples, how the training process
+is accomplished, and further description of actions during last phase,
+which is video sequence processing.
 
 ### Face image processing
 
@@ -966,6 +1032,11 @@ quickly find location of frontal part of face. The loop is recursively
 walking though folders from image folders, reading labels, which is used
 to identify recognized person later, and put that on a video material
 above the face.
+
+![](media/image7.png){width="3.313432852143482in"
+height="4.421288276465442in"}
+
+[]{#_Toc535110996 .anchor}Figure 6Examplary input file
 
 Haar-like cascades method works in greyscale, so the next step is image
 being changed to greyscale from blue green red scale, which is provided
@@ -988,6 +1059,11 @@ is required.
 
 $$\operatorname{}{\left( x1 - x2\ ,\ y1 - y2 \right)*\frac{180}{\pi}}$$
 
+![](media/image8.png){width="3.2238812335958005in"
+height="3.2238812335958005in"}
+
+[]{#_Toc535110997 .anchor}Figure 7Eyes detection in scope of face
+
 Then, a few rules are being applied to filter whether the eyes that were
 detected, are not a false positive. Assuming that pictures are of the
 people with the face only in position more or less perpendicularly to
@@ -999,13 +1075,26 @@ With such value rotation matrix that is further calculated would flip
 image about upside down. To adjust that value $\frac{\pi}{2} - 177$
 would be applied.
 
+![](media/image9.png){width="3.4003860454943133in"
+height="4.537312992125984in"}
+
+[]{#_Toc535110998 .anchor}Figure 8Photo after rotation matrix was
+applied
+
 Taking above angle, rotation matrix is calculated and applied to the
 photo. Although to avoid black corners that appear when rotation is
 applied to previously cut photo, rotation is applied to the main photo
 before the face cutout and the procedure with looking for the face is
-retried. To avoid noises and training algorithm with unnecessary details
-Gaussian blur is applied. Also, histogram normalization method is
-applied, to emphasize the most distinct spots.
+retried.
+
+To avoid noises and training algorithm with unnecessary details Gaussian
+blur is applied. Also, histogram normalization method is applied, to
+emphasize the most distinct spots.
+
+![](media/image10.png){width="3.5820898950131235in"
+height="3.5820898950131235in"}
+
+[]{#_Toc535110999 .anchor}Figure 9Examplary output file
 
 Last operation is to create a separate folder that processed images will
 be stored in. Every face picture has the same height and width, that is
@@ -1042,6 +1131,11 @@ above face of given person, with coordinates visible.
 
 Verification and validation
 ===========================
+
+> A few steps were taken to check that scripts meets the requirements
+> and specifications and fulfills the intended purpose. Achieved
+> accuracy and performance for test videos is described in this part,
+> together with procedure that led to those outcomes.
 
 Verification procedure
 ----------------------
@@ -1088,10 +1182,10 @@ detected.
 
 The ROC Curve was prepared for the system:
 
-![](media/image6.png){width="5.238888888888889in"
+![](media/image11.png){width="5.238888888888889in"
 height="4.163888888888889in"}
 
-Figure 5ROC Curve for Eigenface recognition
+[]{#_Toc535111000 .anchor}Figure 10ROC Curve for Eigenface recognition
 
 Conclusions
 ===========
@@ -1202,21 +1296,26 @@ Conference on Electrical Engineering and Information & Communication
 Technology*, Bangladesh, 2014. \[20\] S. Mallick, „Learn OpenCV," 30 10
 2015. \[Online\]. Available:
 https://www.learnopencv.com/opencv-c-vs-python-vs-matlab-for-computer-vision/.
-\[Data uzyskania dostępu: 6 1 2018\].\[21\] „docs.opencv," Intel
-Corporation, \[Online\]. Available:
+\[Accessed: 6 1 2018\].\[21\] „docs.opencv," Intel Corporation,
+\[Online\]. Available:
 https://docs.opencv.org/2.4/modules/objdetect/doc/cascade\_classification.html.
-\[Data uzyskania dostępu: 10 January 2019\].\[22\] G. M. Zafaruddin i H.
-S. Fadewar, „Face recognition: A holistic approach review," w
-*International Conference on Contemporary Computing and Informatics*,
-Mysore, 2014.
+\[Accessed: 10 January 2019\].\[22\] G. M. Zafaruddin i H. S. Fadewar,
+„Face recognition: A holistic approach review," w *International
+Conference on Contemporary Computing and Informatics*, Mysore, 2014.
 
 List of abbreviations and symbols {#list-of-abbreviations-and-symbols .ListParagraph}
 =================================
 
-  *DNA*   deoxyribonucleic acid
-  ------- -------------------------
-  *MVC*   model--view--controller
-  *N*     cardinality of data set
+  *CPU*    Central processing unit
+  -------- ------------------------------------
+  *ROC*    Receiver operating characteristics
+  *PCA*    Principal component analysis
+  *GA*     Generic algorithm
+  *UML*    Unified Modeling Language
+  *XML*    Extensible Markup Language
+  *JPEG*   Joint Photographic Experts Group
+           
+           
 
 Contents of attached CD-ROM {#contents-of-attached-cd-rom .ListParagraph}
 ===========================
@@ -1230,5 +1329,30 @@ The thesis is accompanied by a CD-ROM containing:
 List of Figures {#list-of-figures .ListParagraph}
 ===============
 
+[Figure 1Basic Haar-like features \[1\] 5](#_Ref533875397)
+
+[Figure 2Haar-like feature on face \[5\] 5](#_Ref533875707)
+
+[Figure 3Extended features proposed by Lienhart and Maydt \[6\]
+6](#_Toc535110993)
+
+[Figure 4 Joint Haar-Like feature 7](#_Toc535110994)
+
+[Figure 5Use cases UML 18](#_Toc535110995)
+
+[Figure 6Examplary input file 27](#_Toc535110996)
+
+[Figure 7Eyes detection in scope of face 28](#_Toc535110997)
+
+[Figure 8Photo after rotation matrix was applied 29](#_Toc535110998)
+
+[Figure 9Examplary output file 30](#_Toc535110999)
+
+[Figure 10ROC Curve for Eigenface recognition 34](#_Toc535111000)
+
 List of Tables {#list-of-tables .ListParagraph}
 ==============
+
+[Table 1 List of libraries needed to run the program 20](#_Ref534597280)
+
+[Table 2 requirements.txt file 22](#_Toc535110248)
